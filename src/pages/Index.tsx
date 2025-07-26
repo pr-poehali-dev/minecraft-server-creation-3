@@ -10,8 +10,12 @@ const Index = () => {
       <header className="border-b-4 border-minecraft-brown bg-minecraft-obsidian-black/90 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <div className="text-minecraft-green font-minecraft text-xl animate-pulse">
-              HEXAHEDRON HAVEN
+            <div className="flex items-center">
+              <img 
+                src="https://cdn.poehali.dev/files/81b7adec-5fc4-457b-82e9-ecf2a8f6b395.png" 
+                alt="Hexahedron Haven Logo" 
+                className="h-12 w-auto animate-pulse"
+              />
             </div>
             <div className="flex space-x-6">
               {[
