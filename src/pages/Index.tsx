@@ -53,27 +53,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Server Stats */}
-      <section className="py-16 bg-minecraft-obsidian-black/80">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              { icon: "Users", label: "Игроки онлайн", value: "247", color: "minecraft-green" },
-              { icon: "Clock", label: "Аптайм", value: "99.8%", color: "minecraft-diamond" },
-              { icon: "Zap", label: "TPS", value: "20.0", color: "minecraft-green" },
-              { icon: "Globe", label: "Миры", value: "5", color: "minecraft-brown" }
-            ].map((stat, index) => (
-              <Card key={index} className="bg-minecraft-stone/20 border-2 border-minecraft-stone hover:border-minecraft-green transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6 text-center">
-                  <Icon name={stat.icon as any} className={`mx-auto mb-3 text-${stat.color}`} size={32} />
-                  <div className={`text-3xl font-minecraft text-${stat.color} mb-2`}>{stat.value}</div>
-                  <div className="text-gray-300 font-minecraft text-sm">{stat.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Interactive World Map */}
       <section className="py-16 bg-gradient-to-r from-minecraft-stone to-minecraft-dirt">
