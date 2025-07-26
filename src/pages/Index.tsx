@@ -14,9 +14,16 @@ const Index = () => {
               HEXAHEDRON HAVEN
             </div>
             <div className="flex space-x-6">
-              {['Главная', 'Команды', 'Форум', 'Правила'].map((item) => (
-                <button key={item} className="text-white hover:text-minecraft-green transition-colors duration-300 font-minecraft text-sm border-2 border-transparent hover:border-minecraft-green px-3 py-1">
-                  {item}
+              {[
+                { name: 'Главная', action: () => {} },
+                { name: 'Команды', action: () => {} },
+                { name: 'Форум', action: () => window.open('https://discord.gg/2cYmG7jN', '_blank') },
+                { name: 'Правила', action: () => window.location.href = '/rules' }
+              ].map((item) => (
+                <button key={item.name} 
+                  onClick={item.action}
+                  className="text-white hover:text-minecraft-green transition-colors duration-300 font-minecraft text-sm border-2 border-transparent hover:border-minecraft-green px-3 py-1">
+                  {item.name}
                 </button>
               ))}
             </div>
@@ -48,7 +55,11 @@ const Index = () => {
               <Icon name="Play" className="mr-2" />
               ВОЙТИ В ИГРУ
             </Button>
-            <Button variant="outline" className="border-2 border-minecraft-green text-minecraft-green hover:bg-minecraft-green hover:text-white font-minecraft px-8 py-3 text-lg hover:scale-105 transition-all duration-200">
+            <Button 
+              variant="outline" 
+              className="border-2 border-minecraft-green text-minecraft-green hover:bg-minecraft-green hover:text-white font-minecraft px-8 py-3 text-lg hover:scale-105 transition-all duration-200"
+              onClick={() => window.open('https://discord.gg/2cYmG7jN', '_blank')}
+            >
               <Icon name="Users" className="mr-2" />
               НАШЕ СООБЩЕСТВО
             </Button>
@@ -104,56 +115,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Server Features */}
-      <section className="py-16 bg-minecraft-stone/20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-minecraft text-white text-center mb-12">
-            ОСОБЕННОСТИ СЕРВЕРА
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: "Sword",
-                title: "PvP АРЕНЫ",
-                description: "Сражайся с другими игроками в специально оборудованных аренах",
-                features: ["Рейтинговая система", "Турниры", "Награды"]
-              },
-              {
-                icon: "Home",
-                title: "ПРИВАТНЫЕ РЕГИОНЫ",
-                description: "Защити свои постройки от грифинга и воровства",
-                features: ["Система привата", "Друзья и враги", "Расширение территории"]
-              },
-              {
-                icon: "Coins",
-                title: "ЭКОНОМИКА",
-                description: "Торгуй, зарабатывай и развивай свой бизнес",
-                features: ["Магазины игроков", "Аукцион", "Банковская система"]
-              }
-            ].map((feature, index) => (
-              <Card key={index} className="bg-minecraft-obsidian-black/80 border-2 border-minecraft-stone hover:border-minecraft-green transition-all duration-300 hover:scale-105">
-                <CardHeader className="text-center">
-                  <Icon name={feature.icon as any} className="mx-auto mb-4 text-minecraft-green" size={48} />
-                  <CardTitle className="font-minecraft text-minecraft-green text-xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-gray-300">
-                    {feature.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
-                    {feature.features.map((item, idx) => (
-                      <div key={idx} className="flex items-center text-gray-300">
-                        <Icon name="Check" className="mr-2 text-minecraft-green" size={16} />
-                        <span className="font-minecraft text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* How to Join */}
       <section className="py-16 bg-minecraft-green/10">
@@ -166,7 +128,7 @@ const Index = () => {
               <CardContent className="p-8">
                 <div className="text-center mb-6">
                   <Badge className="bg-minecraft-green text-white font-minecraft text-lg px-4 py-2">
-                    IP: hexahedron-haven.ru
+                    IP: HexahedronHaven.aternos.me:33672
                   </Badge>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
