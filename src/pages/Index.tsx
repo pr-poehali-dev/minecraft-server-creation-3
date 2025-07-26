@@ -41,7 +41,10 @@ const Index = () => {
             Добро пожаловать на лучший Minecraft сервер! Исследуй, строй, сражайся и заводи новых друзей в нашем уникальном мире.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-minecraft-green hover:bg-minecraft-green-dark text-white font-minecraft px-8 py-3 text-lg border-2 border-minecraft-green-dark hover:scale-105 transition-all duration-200">
+            <Button 
+              className="bg-minecraft-green hover:bg-minecraft-green-dark text-white font-minecraft px-8 py-3 text-lg border-2 border-minecraft-green-dark hover:scale-105 transition-all duration-200"
+              onClick={() => window.open('https://preview--minecraft-server-creation-3.poehali.dev', '_blank')}
+            >
               <Icon name="Play" className="mr-2" />
               ВОЙТИ В ИГРУ
             </Button>
