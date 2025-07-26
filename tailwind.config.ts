@@ -61,7 +61,27 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				minecraft: {
+					green: '#4CAF50',
+					'green-dark': '#2E7D32',
+					brown: '#8B4513',
+					'brown-dark': '#5D2F0A',
+					stone: '#808080',
+					'stone-dark': '#424242',
+					dirt: '#8B7355',
+					cobblestone: '#7A7A7A',
+					diamond: '#5DADE2',
+					'obsidian-black': '#1A1A1A'
 				}
+			},
+			fontFamily: {
+				minecraft: ['"Press Start 2P"', 'monospace'],
+				pixel: ['"Press Start 2P"', 'monospace']
+			},
+			fontFamily: {
+				minecraft: ['"Press Start 2P"', 'monospace'],
+				pixel: ['"Press Start 2P"', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
