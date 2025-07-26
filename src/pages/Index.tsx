@@ -90,7 +90,10 @@ const Index = () => {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full bg-minecraft-green hover:bg-minecraft-green-dark font-minecraft">
+                  <Button 
+                    className="w-full bg-minecraft-green hover:bg-minecraft-green-dark font-minecraft"
+                    onClick={() => window.open('https://www.chunkbase.com/apps/seed-map#seed=3810333239354355870&platform=java_1_20&dimension=overworld&x=-3221&z=320&zoom=-0.089', '_blank')}
+                  >
                     <Icon name="Map" className="mr-2" />
                     ОТКРЫТЬ ПОЛНУЮ КАРТУ
                   </Button>
