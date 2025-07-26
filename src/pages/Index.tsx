@@ -16,8 +16,9 @@ const Index = () => {
             <div className="flex space-x-6">
               {[
                 { name: 'Главная', action: () => {} },
-                { name: 'Команды', action: () => {} },
-                { name: 'Форум', action: () => window.open('https://discord.gg/2cYmG7jN', '_blank') },
+                { name: 'Команды', action: () => window.location.href = '/commands' },
+                { name: 'Сборка', action: () => window.location.href = '/modpack' },
+                { name: 'Форум', action: () => window.open('https://discord.gg/ujs7EUqS', '_blank') },
                 { name: 'Правила', action: () => window.location.href = '/rules' }
               ].map((item) => (
                 <button key={item.name} 
@@ -58,7 +59,7 @@ const Index = () => {
             <Button 
               variant="outline" 
               className="border-2 border-minecraft-green text-minecraft-green hover:bg-minecraft-green hover:text-white font-minecraft px-8 py-3 text-lg hover:scale-105 transition-all duration-200"
-              onClick={() => window.open('https://discord.gg/2cYmG7jN', '_blank')}
+              onClick={() => window.open('https://discord.gg/ujs7EUqS', '_blank')}
             >
               <Icon name="Users" className="mr-2" />
               НАШЕ СООБЩЕСТВО
